@@ -12,24 +12,24 @@
 		"player-guid": "9D8B1BCA-7B9A-4186-BA0F-A8983E9F72D1",
 		"player-name": "Mats L Sørensen"
 	},
-	"sets" [
+	"sets": [
 		{
-			"setid" = 1,
+			"setid" : 1,
 			"player1" : 11,
 			"player2" : 8
 		},
 		{
-			"setid" = 2,
+			"setid" : 2,
 			"player1" : 11,
 			"player2" : 13
 		},
 		{
-			"setid" = 3,
+			"setid" : 3,
 			"player1" : 5,
 			"player2" : 11
 		},
 		{
-			"setid" = 4,
+			"setid" : 4,
 			"player1" : 9,
 			"player2" : 11
 		}						

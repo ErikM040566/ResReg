@@ -1,0 +1,33 @@
+{
+  "tournament-startdate": "2018-10-02",
+  "tournament-enddate": "2018-10-04",
+  "tournament-guid": "E24748C9-343B-4B6A-8010-8D4F7092F08E",
+  "tournament-weight": 1,
+  "classes": [
+    {
+      "class-name": "Herre D",
+      "class-desc": "Herre rank mindre enn 900"
+    },
+    {
+      "class-name": "Herre C",
+      "class-desc": "Herre rank mer enn 900, mindre enn 1100"
+    },
+    {
+      "class-name": "Herre B",
+      "class-desc": "Herre rank mer enn 1100, mindre enn 1300"
+    }
+  ],
+  "arenas": [
+    {
+      "arena-name": "hall 1",
+      "arena-adress": "bortenfor svingen 4",
+      "arena-zip": "0200",
+      "arena-place": "Oslo",
+      "number-of-fields": 24,
+      "geo": {
+        "lng": "23.45678343",
+        "lat": "54.34324234"
+      }
+    }
+  ]
+}
