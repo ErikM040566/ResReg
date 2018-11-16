@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
+using Newtonsoft.Json;
 
 namespace FunctionResultReg
 {
@@ -14,14 +15,18 @@ namespace FunctionResultReg
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
             log.Info("C# HTTP trigger function processed a request.");
-
+            HttpResponseMessage res;
             // Get request body
-            dynamic data = await req.Content.ReadAsAsync<object>();
-            string name = data?.name;
+            object data = await req.Content.ReadAsAsync<object>();
 
-            var res = string.IsNullOrWhiteSpace(name) 
-                ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body") 
-                : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
+            if (data != null)
+            {
+                res = req.CreateResponse(HttpStatusCode.OK, data);
+            }
+            else
+            {
+                res = req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body");
+            }
 
             return res;
         }
