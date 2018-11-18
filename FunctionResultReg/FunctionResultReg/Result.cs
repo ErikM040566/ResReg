@@ -1,16 +1,17 @@
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
-using Newtonsoft.Json;
+using ResultReg.Storage;
 
-namespace FunctionResultReg
+namespace ResultReg.FunctionResultReg
 {
     public static class Result
     {
+        private static readonly StorageQueue storageQueue = new StorageQueue();
+
         [FunctionName("Result")]
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
@@ -22,6 +23,7 @@ namespace FunctionResultReg
             if (data != null)
             {
                 res = req.CreateResponse(HttpStatusCode.OK, data);
+                await storageQueue.AddMessageToQueueAsync((string)data);
             }
             else
             {
