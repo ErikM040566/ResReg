@@ -1,42 +1,41 @@
 {
-	"tournament-date" : "2018-10-02",
-	"tournament-guid": "E24748C9-343B-4B6A-8010-8D4F7092F08E",
-	"match-guid": "8D5806D0-0680-4A43-9230-AF0E1923EC6E",
-	"match-id" : "logical desc of name",
-	"datetime" : "2018-10-02T09:24:00",
-	"player1": {
-		"player-guid": "7F7996D2-1145-4394-8A93-87A2CAA26B91",
-		"player-name": "Ulrik Martinsen"
-	},
-	"player2": {
-		"player-guid": "9D8B1BCA-7B9A-4186-BA0F-A8983E9F72D1",
-		"player-name": "Mats L Sørensen"
-	},
-	"sets": [
-		{
-			"setid" : 1,
-			"player1" : 11,
-			"player2" : 8
-		},
-		{
-			"setid" : 2,
-			"player1" : 11,
-			"player2" : 13
-		},
-		{
-			"setid" : 3,
-			"player1" : 5,
-			"player2" : 11
-		},
-		{
-			"setid" : 4,
-			"player1" : 9,
-			"player2" : 11
-		}						
-	],
-	"total": {
-			"player1" : 1,
-			"player2" : 3
-		}
-	}
+  "tournament_date": "2018-10-02",
+  "tournament_guid": "E24748C9-343B-4B6A-8010-8D4F7092F08E",
+  "match_guid": "8D5806D0-0680-4A43-9230-AF0E1923EC6E",
+  "match_id": "logical desc of name",
+  "datetime": "2018-10-02T09:24:00",
+  "player1": {
+    "player_guid": "7F7996D2-1145-4394-8A93-87A2CAA26B91",
+    "player_name": "Ulrik Martinsen"
+  },
+  "player2": {
+    "player_guid": "9D8B1BCA-7B9A-4186-BA0F-A8983E9F72D1",
+    "player_name": "Mats L Sørensen"
+  },
+  "sets": [
+    {
+      "setid": 1,
+      "player1": 11,
+      "player2": 8
+    },
+    {
+      "setid": 2,
+      "player1": 11,
+      "player2": 13
+    },
+    {
+      "setid": 3,
+      "player1": 5,
+      "player2": 11
+    },
+    {
+      "setid": 4,
+      "player1": 9,
+      "player2": 11
+    }
+  ],
+  "total": {
+    "player1": 1,
+    "player2": 3
+  }
 }
